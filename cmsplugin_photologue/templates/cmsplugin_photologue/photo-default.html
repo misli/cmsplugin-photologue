@@ -1,0 +1,1 @@
+{% if plugin.display_link %}<a href="{{ photo.plugin_link_url }}" data-lightbox="{{ plugin.title_slug }}">{% endif %}<img src="{{ photo.plugin_display_url }}" width="{{ photo.plugin_display_size.0 }}" height="{{ photo.plugin_display_size.1 }}" alt="{{ photo.title }}" {% block photo_attributes %}{% endblock %} />{% if plugin.display_link %}</a>{% endif %}
