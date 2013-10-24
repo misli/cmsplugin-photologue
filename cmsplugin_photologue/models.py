@@ -39,9 +39,9 @@ ORDER_CHOICES = (
 
 
 class PhotologuePlugin(CMSPlugin):
-    display_size = models.ForeignKey(PhotoSize, related_name='+', blank=True, null=True)
-    link_size    = models.ForeignKey(PhotoSize, related_name='+', blank=True, null=True)
-    display_link = models.BooleanField(_('display link'))
+    display_size = models.ForeignKey(PhotoSize, verbose_name=_('Display size'), related_name='+', blank=True, null=True)
+    link_size    = models.ForeignKey(PhotoSize, verbose_name=_('Link size'),    related_name='+', blank=True, null=True)
+    display_link = models.BooleanField(_('Display link'))
 
     def _add_size_attributes(self, photo):
         if self.display_size:

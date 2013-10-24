@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-24 15:59+0200\n"
+"POT-Creation-Date: 2013-10-24 16:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,9 +58,17 @@ msgstr "Od nejstarších"
 msgid "Random order"
 msgstr "Náhodné pořadí"
 
+#: models.py:42
+msgid "Display size"
+msgstr "Velikost zobrazení"
+
+#: models.py:43
+msgid "Link size"
+msgstr "Velikost odkazu"
+
 #: models.py:44
-msgid "display link"
-msgstr "zobrazovat obrázky jako odkaz"
+msgid "Display link"
+msgstr "Zobrazovat obrázky jako odkaz"
 
 #: models.py:70
 msgid "all"
