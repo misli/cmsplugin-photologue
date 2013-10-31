@@ -63,18 +63,22 @@ class PhotologuePlugin(CMSPlugin):
         self.link_size    = oldinstance.link_size
 
     def __unicode__(self):
-        if self.obj:
-            return unicode(self.obj)
-        else:
-            return _('all')
+        return unicode(self.title)
 
     @property
     def title(self):
-        return self.obj.title
+        if self.obj:
+            return self.obj.title
+        else:
+            return _('all')
+        
 
     @property
     def title_slug(self):
-        return self.obj.title_slug
+        if self.obj:
+            return self.obj.title_slug
+        else:
+            return 'all'
 
     class Meta:
         abstract = True
