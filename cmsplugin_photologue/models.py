@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from .settings import *
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
 
@@ -9,25 +10,11 @@ from photologue.models import Gallery, Photo, PhotoSize
 import random
 
 
-# use CMSPLUGIN_PHOTOLOGUE_PHOTO_TEMPLATES to override PHOTO_TEMPLATES
-# or CMSPLUGIN_PHOTOLOGUE_ADD_PHOTO_TEMPLATES to add custom PHOTO_TEMPLATES
-# to the existing ones
+PHOTO_TEMPLATES   = getattr(settings, 'CMSPLUGIN_PHOTOLOGUE_PHOTO_TEMPLATES',
+                                       CMSPLUGIN_PHOTOLOGUE_PHOTO_TEMPLATES)
 
-PHOTO_TEMPLATES = getattr(settings, 'CMSPLUGIN_PHOTOLOGUE_PHOTO_TEMPLATES', (
-    ('default', _('default')),
-    ('center',  _('center')),
-    ('left',    _('left')),
-    ('right',   _('right')),
-)) + getattr(settings, 'CMSPLUGIN_PHOTOLOGUE_ADD_PHOTO_TEMPLATES', ())
-
-# use CMSPLUGIN_PHOTOLOGUE_GALLERY_TEMPLATES to override GALLERY_TEMPLATES
-# or CMSPLUGIN_PHOTOLOGUE_ADD_GALLERY_TEMPLATES to add custom GALLERY_TEMPLATES
-# to the existing ones
-
-GALLERY_TEMPLATES = getattr(settings, 'CMSPLUGIN_PHOTOLOGUE_GALLERY_TEMPLATES', (
-    ('default', _('default')),
-)) + getattr(settings, 'CMSPLUGIN_PHOTOLOGUE_ADD_GALLERY_TEMPLATES', ())
-
+GALLERY_TEMPLATES = getattr(settings, 'CMSPLUGIN_PHOTOLOGUE_GALLERY_TEMPLATES',
+                                       CMSPLUGIN_PHOTOLOGUE_GALLERY_TEMPLATES)
 
 ORDER_CHOICES = (
     ('gallery', _('Gallery Order')),
