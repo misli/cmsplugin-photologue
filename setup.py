@@ -14,6 +14,7 @@ setup(
     include_package_data = True,
     install_requires = [
         'django-cms',
+        'django-photologue',
     ],
     classifiers     = [
         'Development Status :: 5 - Production/Stable',
