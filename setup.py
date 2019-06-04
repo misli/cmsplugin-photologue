@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name            = 'cmsplugin-photologue',
-    version         = '1.1.0',
+    version         = '1.1.1',
     description     = 'django CMS plugin for including photos and galleries from Photologue',
     author          = 'Jakub Dorňák',
     author_email    = 'jakub.dornak@misli.cz',
