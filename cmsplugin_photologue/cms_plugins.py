@@ -22,6 +22,9 @@ class PhotologuePhotoPlugin(CMSPluginBase):
         })
         return context
 
+    def get_render_template(self, context, instance, placeholder):
+        return 'cmsplugin_photologue/photo-{}.html'.format(instance.template)
+
     def icon_src(self, instance):
         return instance.photo.plugin_display_url
 
@@ -38,6 +41,9 @@ class PhotologueGalleryPlugin(CMSPluginBase):
             'placeholder': placeholder,
         })
         return context
+
+    def get_render_template(self, context, instance, placeholder):
+        return 'cmsplugin_photologue/gallery-{}.html'.format(instance.template)
 
 
 plugin_pool.register_plugin(PhotologueGalleryPlugin)
