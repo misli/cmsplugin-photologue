@@ -1,16 +1,35 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
+from setuptools import setup, find_packages
 
-from distutils.core import setup
 
 setup(
-    name             = 'cmsplugin_photologue',
-    version          = '1.0',
-    description      = 'Simple Django CMS plugin for including photos and galleries from Photologue in Your pages',
-    long_description = 'Simple Django CMS plugin for including photos and galleries from Photologue in Your pages',
-    author           = 'Jakub Dorňák',
-    author_email     = 'jdornak@redhat.com',
-    license          = 'BSD',
-    url              = 'https://github.com/misli/cmsplugin-photologue',
-    packages         = ['cmsplugin_photologue'],
-    package_data     = {'cmsplugin_photologue': ['templates/*']},
+    name            = 'cmsplugin-photologue',
+    version         = '1.0.0',
+    description     = 'django CMS plugin for including photos and galleries from Photologue',
+    author          = 'Jakub Dorňák',
+    author_email    = 'jakub.dornak@misli.cz',
+    license         = 'BSD',
+    url             = 'https://github.com/misli/cmsplugin-photologue',
+    packages        = find_packages(),
+    include_package_data = True,
+    install_requires = [
+        'django-cms',
+    ],
+    classifiers     = [
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'Framework :: Django :: 1.11',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Natural Language :: Czech',
+        'Natural Language :: English',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.5',
+        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+        'Topic :: Software Development',
+        'Topic :: Software Development :: Libraries :: Application Frameworks',
+    ],
 )
